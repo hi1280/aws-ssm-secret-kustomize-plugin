@@ -18,11 +18,12 @@ type plugin struct {
 	types.ObjectMeta   `json:"metadata,omitempty" yaml:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	Envs               []string `json:"envs,omitempty" yaml:"envs,omitempty"`
 	AwsRegion          string   `json:"region,omitempty" yaml:"region,omitempty"`
-	AwsAccessKeyID     string   `json:"aws_access_key_id,omitempty" yaml:"aws_access_key_id,omitempty"`
-	AwsSecretAccessKey string   `json:"aws_secret_access_key,omitempty" yaml:"aws_secret_access_key,omitempty"`
-	AwsSessionToken    string   `json:"aws_session_token,omitempty" yaml:"aws_session_token,omitempty"`
+	AwsAccessKeyID     string   `json:"awsAccessKeyId,omitempty" yaml:"awsAccessKeyId,omitempty"`
+	AwsSecretAccessKey string   `json:"awsSecretAccessKey,omitempty" yaml:"awsSecretAccessKey,omitempty"`
+	AwsSessionToken    string   `json:"awsSessionToken,omitempty" yaml:"awsSessionToken,omitempty"`
 }
 
+//KustomizePlugin noinspection GoUnusedGlobalVariable
 var KustomizePlugin plugin
 
 func (p *plugin) Config(h *resmap.PluginHelpers, c []byte) error {
