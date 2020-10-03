@@ -1,4 +1,4 @@
-module github.com/hi1280/secret-aws-ssm-kustomize-plugin
+module github.com/hi1280/aws-ssm-secret-kustomize-plugin
 
 go 1.14
 
